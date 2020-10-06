@@ -1,0 +1,69 @@
+.banner-single{
+    margin-bottom: 30px;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.contenu{
+    h1{
+        margin: 0px 7.5% 35px 7.5%;
+    }
+
+    .contenu-single{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 0 7.5%;
+
+        .contenu-single-right{
+            flex: 1 1 60%;
+            margin-right: 25px;
+        }
+
+        .contenu-single-left{
+            flex: 1 1 auto;
+
+            span{
+                font-size: 2.4rem;
+            }
+
+            .s-line{
+                width: 50px;
+                border: solid 1px $orange;
+                margin: 20px 0;
+            }
+        }
+    
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    .banner-single{
+        margin-bottom: 20px;
+    }
+
+    .contenu {
+        h1{
+            margin: 0px 7.5% 15px 7.5%;
+        }
+   
+        .contenu-single .contenu-single-left{
+            span{
+                font-size: 1.2rem;
+                }
+        }
+
+    } 
+    
+    .contenu-single-right{
+        h4{
+            margin-top: 15px;
+        }
+    }
+
+}

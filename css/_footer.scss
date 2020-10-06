@@ -1,0 +1,38 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 50px 7.5%;
+    border: solid 8px $grey;
+    flex-wrap: wrap;
+
+    .RS img{
+        margin: 0 25px 0 0;
+    }
+
+    .f-line{
+        display: none;
+        width: 25px;
+        border: solid 1px $orange;
+        margin-bottom: 10px;
+    }
+}
+
+// responsive
+@media screen and (max-width:480px){
+    .footer{
+        padding: 35px 7.5%;
+        border: solid 5px $grey;
+
+        .f-line{
+            display: block;
+        }
+
+        .RS img{
+            width: 25px;
+            height: auto;
+            margin: 0 18px 0 0;
+        }
+    }
+
+}

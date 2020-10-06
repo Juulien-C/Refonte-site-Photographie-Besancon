@@ -1,0 +1,88 @@
+.banner{
+    background-color: $degrade-blue;
+    height: 90vh;
+    display: flex;
+    align-items: center;    
+    position: relative;
+
+    .fleche{
+        position: absolute;
+        bottom: 10px;
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        animation: arrow 1.4s linear infinite alternate;
+    }
+
+    .bkg-banner{
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;    
+        padding: 0px 7.5%;
+
+
+        .banner-left{
+            flex: 1 1 45%;
+            padding-right: 20px;
+
+            p{
+                margin-bottom: 25px;
+            }
+        }
+
+        .banner-right{
+            flex: 0 1 auto;
+
+            img{
+                width: 100%;
+                height: auto;
+                box-shadow: 35px 35px $orange;
+            }
+        }
+    }
+
+}
+
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 25%;
+    }
+
+    50%{
+        opacity: 50%;
+    }
+
+    75%{
+        opacity: 75%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+// responsive 
+@media screen and (max-width:480px){
+    .banner{
+        height: 67vh;
+
+        .bkg-banner{
+
+            .banner-right{
+
+                img{
+                    width: 90%;
+                    box-shadow: 20px 20px $orange;
+                }
+            }
+        }
+    }
+
+}

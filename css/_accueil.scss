@@ -1,0 +1,212 @@
+// Banniere accueil
+.bkg-accueil{
+    background: $degrade, url('img/accueil_banniere.jpg') center center;
+    background-size: cover;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+
+    p{
+        color: $white;
+    }
+}
+
+.wrapper-banner-accueil{
+    margin: 0 7.5%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 10px;
+    align-items: center;
+}
+
+.banner-accueil-b-right{
+    grid-column: 8 / span 5 ;
+}
+
+
+// animation scroll
+
+.animation-scroll{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    // transform: translate(-50%, 0%);
+}
+
+    
+.mouse {
+height: 50px;
+width: 30px;
+border-radius: 14px;
+transform: none;
+border: 2px solid $white;
+margin-bottom: 6px;
+}
+
+.arrow {
+display: block;
+transform: rotate(45deg);
+border-right: 1px solid $white;
+border-bottom: 1px solid $white;
+margin: 5px 0px 8px 8px;
+width: 15px;
+height: 15px;
+animation: mouse-scroll .8s infinite alternate;
+}
+
+@keyframes mouse-scroll {
+0% {
+    opacity: 0;
+}
+25% {
+    opacity: .25;
+}
+50% {
+    opacity: .5;
+}
+75% {
+    opacity: .75;
+}
+100% {
+    opacity: 1;
+}
+}
+
+.wheel {
+display: block;
+margin: 5px auto;
+position: relative;
+background-color: $white;
+height: 7px;
+width: 4px;
+border: 2px solid $white;
+border-radius: 8px;
+animation: mouse-wheel 1.4s linear infinite;
+}
+
+@keyframes mouse-wheel {
+0% {
+    transform: translateY(0);
+}
+100% {
+    transform: translateY(25px);
+}
+}
+
+// section 1
+
+.wrapper-s1-accueil{
+    margin: 0 7.5%;
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // column-gap: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .s1-b-left{
+        flex: 1 1 45%;
+        align-self: center;
+        padding: 0px 20px 20px 0px;;
+        // grid-column: 1 / span 6;
+    }
+
+    .s1-b-right {
+        flex: 0 1 auto;
+        // grid-column: 7 / span 6;
+    
+        img{
+            width: 100%;
+            height: auto;
+            box-shadow: 60px 60px $degrade-orange;
+        }
+    }
+}
+
+// section 2
+.s2-accueil h2{
+    margin: 0 7.5%;
+}
+
+
+//bloc event fichier Sass _blocEvent.scss
+
+.s2-accueil-btn{
+    margin: 0 7.5%;
+}
+
+
+.bkg-s3-accueil{
+    background-color: $degrade-orange;
+    padding: 0 7.5%;
+
+    .s3-accueil{    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+        flex-wrap: wrap;
+
+        .s3-b-left{
+            flex-basis: 40%;
+        }
+
+        .s3-b-right{
+            display: flex;
+            justify-content: center;
+
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+// responsive
+@media screen and (max-width:480px){
+    .bkg-accueil{
+        height: 45vh;
+    }
+
+    .wrapper-banner-accueil{
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .banner-accueil-b-right{
+        grid-column: 1 / span 10;
+    }
+
+    .animation-scroll{
+        bottom: 48%;
+    }
+
+    .wrapper-s1-accueil .s1-b-right img{
+        box-shadow: 20px 20px $degrade-orange;
+    }
+
+    .bkg-s3-accueil {
+
+        .s3-accueil {
+            align-items: flex-end;
+
+            .s3-b-left{
+                flex: 1 1 auto;
+                margin-bottom: -45px;
+            }
+
+            .s3-b-right img{                   
+                width: 50%;
+            }
+
+        }
+    }
+
+}
+
+
+  
+
+

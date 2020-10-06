@@ -1,0 +1,187 @@
+// import
+@import "css/colors";
+@import "css/header";
+@import "css/accueil";
+@import "css/blocEvent";
+@import "css/mixins";
+@import "css/footer";
+@import "css/activite";
+@import "css/banner";
+@import "css/single";
+@import "css/adherer";
+@import "css/stages";
+@import "css/contact";
+
+// Règlages généraux
+html {
+    font-size: 62.5%;
+  }
+
+*, body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: $black;
+    margin : 0px;
+    padding : 0px;
+    box-sizing : border-box;
+}
+
+h1, h2{
+    font-weight: bold;
+    color : $blue;
+}
+
+h1{
+    @include font-size(4.8);
+}
+
+h2{
+    @include font-size(4.2);
+}
+
+h4{
+    font-weight: bold;
+    @include font-size(2.8);
+}
+
+h5, h6{
+    font-weight: bold;
+    @include font-size(2.6)
+}
+
+span{
+    @include font-size(2);
+}
+
+p, li{
+    @include font-size(2.4);
+    margin: 25px 0px 15px 0px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+    @include font-size(2.0);
+
+    &:hover{
+        text-decoration: none;
+        color: $blue;
+        transition: all 0.5s ease;
+    }
+}
+
+
+button{
+    font-weight: bold;
+    color: $black;
+    background-color: $orange;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin: 15px 0px;
+
+    &:hover{
+        background-color: $white;
+        border: 2px solid $orange;
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}
+
+.separateur{
+    padding: 40px;
+}
+
+
+.separateur-bleu{
+    width: 690px;
+    height: 55px;
+    background-color: $degrade-blue;
+    margin: 100px auto;
+}
+
+.separateur-orange{
+    width: 690px;
+    height: 20px;
+    border: solid 2px $orange;
+    margin: 70px auto;
+}
+
+
+
+// responsive générale
+@media screen and (max-width:480px){
+    h1{
+        @include font-size(2.4);
+    }
+
+    h2{
+        @include font-size(1.8);
+        margin-bottom: 15px;
+    }
+
+    h4{
+        @include font-size(1.3);
+        margin-bottom: 5px;
+    }
+
+    h5, h6{
+        @include font-size(1.2);
+        margin-bottom: 5px;
+    }
+
+    span{
+        @include font-size(1.1);
+    }
+
+    p, li{
+        @include font-size(1.2);
+        line-height: 1.5;
+        margin: 6px 0;
+    }
+
+    a{
+        @include font-size(1.1);
+    }
+
+    nav{
+        margin: 0 -7.5%;
+    }
+
+    .separateur{
+        padding: 15px 0;
+    }
+
+
+    .separateur-bleu{
+        width: 170px;
+        height: 20px;
+        background-color: $degrade-blue;
+        margin: 40px auto;
+    }
+
+    .separateur-orange{
+        width: 170px;
+        height: 10px;
+        border: solid 1px $orange;
+        margin: 40px auto;
+    }
+
+    .logo img{
+        width: 160px;
+        height: auto;
+    }
+
+    button{
+        padding: 5px 8px;
+        margin: 7px 0;
+    }
+
+}
+
+
+
+
+
+

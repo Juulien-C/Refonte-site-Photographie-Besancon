@@ -1,0 +1,21 @@
+.a-adherer{
+    margin: 20px 17%;
+
+    .a-intro{
+        text-align: center;
+    }
+}
+
+.adh-pp{
+    ul li{
+        list-style: square;
+        list-style-position: inside;        
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .a-adherer{
+       margin: 20px 7.5%; 
+    }
+}

@@ -1,0 +1,60 @@
+.section-activite{
+    h2{
+        margin: 40px 7.5%;
+    }
+
+    .bloc-activite{
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        margin: 10px 7.5%;
+        flex-wrap: wrap;
+
+        .img-activite {
+            flex: 1 1 auto;
+            margin-right: 35px;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .text-activite{
+            flex: 1 1 50%;
+
+            ul li{
+                list-style: square;
+                list-style-position: inside;
+                margin: 10px 0;
+            }
+            
+            p{
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:480px){
+        .section-activite{
+            h2{
+                margin: 20px 7.5%;
+            }
+
+            .bloc-activite{
+
+                .text-activite{
+                    p{
+                        margin-top: 10px;
+                    }
+                }
+    
+            }
+        }
+
+
+}
+

@@ -1,0 +1,41 @@
+.s-stages{
+    margin: 20px 7.5%;
+
+    .s-intro{
+        text-align: center;
+    }
+}
+
+.bloc-stage{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+
+    .text-stage{
+        flex: 1 1 45%;
+        align-self: flex-end;
+        padding-right: 30px;
+
+        button{
+            padding: 10px 30px;
+        }
+    }
+
+    .img-stage{
+        flex: 0 1 auto;
+        margin-bottom: 25px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    .bloc-stage{
+        .img-stage{
+            margin-bottom: 15px;
+        }
+    }
+}
